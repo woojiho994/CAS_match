@@ -9,7 +9,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import streamlit as st
-import pythoncom
+#import pythoncom
 import pandas as pd
 from io import StringIO
 import pdfplumber
@@ -54,7 +54,7 @@ else:
         # st.write(uploaded_file[file])
         if uploaded_file[file].name[-4:] == 'docx':
             st.write(uploaded_file[file])
-            pythoncom.CoInitialize()
+            #pythoncom.CoInitialize()
             docx2pdf.convert(uploaded_file[file].name)
             text = openpdf(uploaded_file[file].name[:-4]+'pdf')   
         else:    
