@@ -12,6 +12,7 @@ import streamlit as st
 import pandas as pd
 from io import StringIO
 import pdfplumber
+import docx2pdf
 st.title("MSDS报告CAS号提取程序")
 
 #%%
@@ -50,7 +51,13 @@ else:
     # st.write(extract(openpdf(uploaded_file),cas))
     for file in range(len(uploaded_file)):  
         # st.write(uploaded_file[file])
-        text = openpdf(uploaded_file[file])
+        if uploaded_file[file].name[-4:] == 'docx':
+        st.write(uploaded_file[file])
+        pythoncom.CoInitialize()
+        docx2pdf.convert(uploaded_file[file].name)
+        text = openpdf(uploaded_file[file].name[:-4]+'pdf')   
+        else:    
+            text = openpdf(uploaded_file[file])
         cas_extract = extract(text,cas)
         if cas_extract != []:
             for item in range(len(cas_extract)):
