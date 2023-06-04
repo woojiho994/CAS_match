@@ -37,7 +37,7 @@ def openpdf(path):
 #%% 函数三、将目标CAS号，和pdf中的内容进行比对。返回什么？
 def extract(text,cas):
     pattern = re.compile(cas,re.S)
-    r_list = pattern.findall(openpdf(text))
+    r_list = pattern.findall(text)
     return r_list
 #%%
 data = pd.DataFrame(columns=['CAS查询情况','匹配结果'])
@@ -50,7 +50,8 @@ else:
     # st.write(extract(openpdf(uploaded_file),cas))
     for file in range(len(uploaded_file)):  
         # st.write(uploaded_file[file])
-        cas_extract = extract(uploaded_file[file],cas)
+        text = openpdf(uploaded_file)
+        cas_extract = extract(text,cas)
         if cas_extract != []:
             for item in range(len(cas_extract)):
                 cas_iso = cas_extract[item]
