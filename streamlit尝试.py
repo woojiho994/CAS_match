@@ -52,10 +52,10 @@ else:
     for file in range(len(uploaded_file)):  
         # st.write(uploaded_file[file])
         if uploaded_file[file].name[-4:] == 'docx':
-        st.write(uploaded_file[file])
-        pythoncom.CoInitialize()
-        docx2pdf.convert(uploaded_file[file].name)
-        text = openpdf(uploaded_file[file].name[:-4]+'pdf')   
+            st.write(uploaded_file[file])
+            pythoncom.CoInitialize()
+            docx2pdf.convert(uploaded_file[file].name)
+            text = openpdf(uploaded_file[file].name[:-4]+'pdf')   
         else:    
             text = openpdf(uploaded_file[file])
         cas_extract = extract(text,cas)
