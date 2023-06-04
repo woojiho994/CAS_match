@@ -41,7 +41,7 @@ def extract(text,cas):
     return r_list
 #%%
 data = pd.DataFrame(columns=['CAS查询情况','匹配结果'])
-uploaded_file = st.file_uploader("请上传一个pdf文件",accept_multiple_files=True)
+uploaded_file = st.file_uploader("请上传pdf文件",accept_multiple_files=True)
 if uploaded_file == []:
     st.stop()
 else:
