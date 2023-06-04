@@ -64,9 +64,9 @@ else:
     data_output = data_rename.drop_duplicates()  #subset='pdf名称'可以查看是不是所有文件都包含在表格里
     # data_output.to_excel('5.28test-加入doc和docx.xlsx')
     # data_output[['pdf名称','CAS号提取']]
-    target_data_base = pd.read_excel('C:/Users/wooji/Nutstore/1/Jiho华南所/鉴定中心-工作/MSDS/102-104物质清单.xlsx',sheet_name='基102-3960种',index_col=0)
-    target_data_pri = pd.read_excel('C:/Users/wooji/Nutstore/1/Jiho华南所/鉴定中心-工作/MSDS/102-104物质清单.xlsx',sheet_name='基103-40种',index_col=0)
-    target_data_key = pd.read_excel('C:/Users/wooji/Nutstore/1/Jiho华南所/鉴定中心-工作/MSDS/102-104物质清单.xlsx',sheet_name='基104-14种',index_col=0)
+    target_data_base = pd.read_excel('/102-104物质清单.xlsx',sheet_name='基102-3960种',index_col=0)
+    target_data_pri = pd.read_excel('/102-104物质清单.xlsx',sheet_name='基103-40种',index_col=0)
+    target_data_key = pd.read_excel('/102-104物质清单.xlsx',sheet_name='基104-14种',index_col=0)
     target_cas_base = target_data_base['CAS']
     target_cas_pri = target_data_pri['CAS']
     target_cas_key = target_data_key['CAS']
