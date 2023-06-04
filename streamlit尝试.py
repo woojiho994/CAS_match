@@ -50,7 +50,7 @@ else:
     # st.write(extract(openpdf(uploaded_file),cas))
     for file in range(len(uploaded_file)):  
         # st.write(uploaded_file[file])
-        text = openpdf(uploaded_file)
+        text = openpdf(uploaded_file[file])
         cas_extract = extract(text,cas)
         if cas_extract != []:
             for item in range(len(cas_extract)):
