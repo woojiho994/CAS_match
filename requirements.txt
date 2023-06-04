@@ -2,3 +2,4 @@ pdfplumber==0.9.0
 pdfminer
 openpyxl
 docx2pdf
+pythoncom
