@@ -13,7 +13,7 @@ import streamlit as st
 import pandas as pd
 from io import StringIO
 import pdfplumber
-import docx2pdf
+
 st.title("MSDS报告CAS号提取程序")
 
 #%%
@@ -97,7 +97,18 @@ else:
     data_final = data_output[['pdf名称','匹配结果','CAS号提取']]
     data_final
 
+import openpyxl
+import base64
 
+
+data_final.to_excel('resuls.xlsx')
+wb2 = openpyxl.load_workbook('resuls.xlsx')
+wb2.save('results.xlsx')#注意！文件此时保存在内存中且为字节格式文件
+data=open('results.xlsx','rb').read()#以只读模式读取且读取为二进制文件
+b64 = base64.b64encode(data).decode('UTF-8')#解码并加密为base64
+href = f'<a href="data:file/data;base64,{b64}" download="myresults.xlsx">Download xlsx file</a>'#定义下载链接，默认的下载文件名是myresults.xlsx
+st.markdown(href, unsafe_allow_html=True)#输出到浏览器
+wb2.close()
 # #%%
 # st.write("Here's our first attempt at using data to create a table:")
 # st.write(pd.DataFrame({
