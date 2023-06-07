@@ -7,5 +7,4 @@ xlrd
 Pillow
 pdf2image
 pytesseract
-exceptions
-docx
+python-docx
