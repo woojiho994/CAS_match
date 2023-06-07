@@ -3,7 +3,7 @@ pdfminer
 openpyxl
 docx2pdf
 xlrd
-pdf2image
 PIL
+pdf2image
 pytesseract
 
