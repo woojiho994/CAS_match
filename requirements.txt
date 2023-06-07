@@ -4,7 +4,6 @@ openpyxl
 docx2pdf
 xlrd
 Pillow
-PIL
 pdf2image
 pytesseract
 
