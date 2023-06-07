@@ -19,7 +19,6 @@ import pandas as pd
 import time
 import os
 import numpy as np
-import pythoncom
 import win32com
 from win32com.client import Dispatch
 import docx2pdf
