@@ -8,4 +8,4 @@ Pillow
 pdf2image
 pytesseract
 python-docx
-poppler
+
