@@ -4,5 +4,6 @@ openpyxl
 docx2pdf
 xlrd
 pdf2image
-pytesseract
 PIL
+pytesseract
+
