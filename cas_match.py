@@ -19,12 +19,12 @@ import pandas as pd
 import time
 import os
 import numpy as np
-import win32com
-from win32com.client import Dispatch
+#import win32com
+#from win32com.client import Dispatch
 import docx2pdf
 import docx
-import win32com.client as wc
-import win32com.client as win32
+#import win32com.client as wc
+#import win32com.client as win32
 import pytesseract
 from PIL import  Image
 import os
