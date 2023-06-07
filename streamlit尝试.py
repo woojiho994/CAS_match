@@ -97,6 +97,7 @@ else:
     
  
     data_final = data_output[['pdf名称','匹配结果','CAS号提取']]
+    end = time.time()
     run_time = end - start
     st.write('运行耗时：'+ str(round(run_time,2))+'秒')
     data_final
