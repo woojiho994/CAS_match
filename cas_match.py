@@ -185,7 +185,7 @@ def main(uploaded_file):
     # target_cas_base = target_cas_base.reset_index(drop=True)
     # target_cas_pri = target_cas_pri.reset_index(drop=True)
     # target_cas_key = target_cas_key.reset_index(drop=True)
-    target_data = pd.read_excel('C:/Users/wooji/Nutstore/1/Jiho华南所/鉴定中心-工作/MSDS/物质清单.xlsx',sheet_name='总表',index_col=0)
+    target_data = pd.read_excel('物质清单.xlsx',sheet_name='总表',index_col=0)
     target_cas = target_data[['CAS','名称','清单']]
     target_cas = target_cas.reset_index(drop=True)
 
