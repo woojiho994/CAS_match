@@ -13,6 +13,7 @@ import streamlit as st
 import pandas as pd
 from io import StringIO
 import pdfplumber
+import time
 
 st.title("MSDS报告CAS号提取程序")
 
@@ -43,6 +44,7 @@ def extract(text,cas):
     return r_list
 #%%
 data = pd.DataFrame(columns=['CAS查询情况','匹配结果'])
+start = time.time()
 uploaded_file = st.file_uploader("请上传pdf文件",accept_multiple_files=True)
 if uploaded_file == []:
     st.stop()
@@ -95,6 +97,8 @@ else:
     
  
     data_final = data_output[['pdf名称','匹配结果','CAS号提取']]
+    run_time = end - start
+    st.write('运行耗时：'+ str(round(run_time,2))+'秒')
     data_final
 
 import openpyxl
