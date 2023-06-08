@@ -147,7 +147,7 @@ def main(uploaded_file):
                  buf.seek(0)
                  img_page=Image.open(buf)
                  # st.write('here')
-                 txt=pytesseract.image_to_string(img_page)#,lang='chi_sim')
+                 txt=pytesseract.image_to_string(img_page,lang='chi_sim')
                  text.append(txt)  
             text = ';'.join(text).strip('')
             cas_extract = extract(text,cas)
