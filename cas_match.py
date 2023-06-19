@@ -33,7 +33,7 @@ from io import BytesIO
 
 import openpyxl
 import base64
-st.title("MSDS报告CAS号提取程序")
+st.header("新污染物信息在线收集与分类筛查平台")
 #%%
 from docx import Document
 
